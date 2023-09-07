@@ -11,9 +11,11 @@ public class FirstController {
     @GetMapping("/hi")
     public String niceToMeetYou(Model model){
         model.addAttribute("username","홍팍");
-
-
         return "greetings";
-
+    }
+    @GetMapping("/bye")
+    public String seeYouNext(Model model){
+        model.addAttribute("nickname","홍길동");
+        return "goodbye";
     }
 }
